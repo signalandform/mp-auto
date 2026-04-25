@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const phoneDisplay = "(817) 548-0680";
 const phoneHref = "tel:+18175480680";
 const address = "1238 W Arkansas Ln, Arlington, TX 76013";
@@ -57,6 +59,25 @@ const hours = [
   ["Friday", "8:30 AM - 5:30 PM"],
   ["Saturday", "Morning hours, call to confirm"],
   ["Sunday", "Closed"],
+];
+
+const shopPhotos = [
+  {
+    src: "/images/mp-auto-facebook-1.jpg",
+    alt: "MP Auto Repair shop photo from the business Facebook page",
+  },
+  {
+    src: "/images/mp-auto-facebook-2.jpg",
+    alt: "MP Auto Repair team or shop photo from the Facebook page",
+  },
+  {
+    src: "/images/mp-auto-facebook-3.jpg",
+    alt: "Vehicle service photo from MP Auto Repair's Facebook page",
+  },
+  {
+    src: "/images/mp-auto-facebook-4.jpg",
+    alt: "Automotive work photo from MP Auto Repair's Facebook page",
+  },
 ];
 
 const localBusinessSchema = {
@@ -236,6 +257,20 @@ export default function Home() {
             <h3>Address</h3>
             <p>{address}</p>
           </div>
+        </div>
+      </section>
+
+      <section className="section gallery" aria-labelledby="gallery-heading">
+        <div className="section-heading">
+          <p className="eyebrow">Gallery</p>
+          <h2 id="gallery-heading">Shop photos</h2>
+        </div>
+        <div className="gallery-grid">
+          {shopPhotos.map((photo) => (
+            <div className="gallery-card" key={photo.src}>
+              <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 640px) 100vw, 25vw" />
+            </div>
+          ))}
         </div>
       </section>
 

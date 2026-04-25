@@ -299,6 +299,30 @@ h3 {
   color: var(--ink);
 }
 
+.gallery {
+  padding-top: 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.gallery-card {
+  position: relative;
+  aspect-ratio: 1;
+  margin: 0;
+  overflow: hidden;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+}
+
+.gallery-card img {
+  object-fit: cover;
+}
+
 .reputation-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -502,6 +526,10 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .review-strip {
     grid-template-columns: 1fr;
   }
@@ -535,7 +563,8 @@ h3 {
   }
 
   .service-grid,
-  .reputation-grid {
+  .reputation-grid,
+  .gallery-grid {
     grid-template-columns: 1fr;
   }
 
@@ -543,7 +572,8 @@ h3 {
   .info-card,
   .visit-card,
   .about-panel,
-  .quote-panel {
+  .quote-panel,
+  .gallery-card {
     border-radius: 24px;
   }
 
