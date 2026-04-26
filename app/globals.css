@@ -80,28 +80,16 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-
-.brand small {
-  display: block;
-  margin-top: 2px;
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0;
-}
-
-.brand-mark {
-  display: grid;
-  width: 48px;
-  height: 48px;
-  place-items: center;
-  color: var(--ink);
-  background: var(--gold);
-  border-radius: 16px;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
+}
+
+.brand img {
+  display: block;
+  width: 154px;
+  height: auto;
 }
 
 .nav-links {
@@ -138,6 +126,24 @@ main {
 
 .hero-copy {
   max-width: 760px;
+}
+
+.hero-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(360px, 76vw);
+  margin-bottom: 28px;
+  padding: 18px 22px;
+  background: white;
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
+.hero-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .eyebrow {

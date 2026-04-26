@@ -3,6 +3,7 @@ import Image from "next/image";
 const phoneDisplay = "(817) 548-0680";
 const phoneHref = "tel:+18175480680";
 const address = "1238 W Arkansas Ln, Arlington, TX 76013";
+const logoSrc = "/images/mp-auto-logo.png";
 const mapHref =
   "https://www.google.com/maps/search/?api=1&query=1238%20W%20Arkansas%20Ln%2C%20Arlington%2C%20TX%2076013";
 
@@ -119,11 +120,7 @@ export default function Home() {
       <section className="hero">
         <nav className="topbar" aria-label="Primary navigation">
           <a className="brand" href="#top" aria-label="MP Auto Repair home">
-            <span className="brand-mark">MP</span>
-            <span>
-              MP Auto Repair
-              <small>Arlington, TX</small>
-            </span>
+            <Image src={logoSrc} alt="MP Auto Repair" width={500} height={170} priority />
           </a>
           <div className="nav-links">
             <a href="#services">Services</a>
@@ -137,6 +134,9 @@ export default function Home() {
 
         <div className="hero-grid" id="top">
           <div className="hero-copy">
+            <div className="hero-logo">
+              <Image src={logoSrc} alt="MP Auto Repair" width={500} height={170} priority />
+            </div>
             <p className="eyebrow">Family-owned auto repair in Arlington</p>
             <h1>Honest repairs, fair pricing, and mechanics who explain the work.</h1>
             <p className="hero-lede">
