@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8f4ec;
-  --foreground: #1d252c;
-  --muted: #60707c;
-  --panel: #fffaf1;
-  --ink: #111820;
-  --red: #c62828;
-  --red-dark: #991b1b;
-  --gold: #f4b942;
-  --border: rgba(17, 24, 32, 0.12);
-  --shadow: 0 24px 80px rgba(17, 24, 32, 0.14);
+  --background: #f4f2ee;
+  --foreground: #171717;
+  --muted: #66615b;
+  --panel: #fbfaf7;
+  --ink: #0b0b0c;
+  --accent: #2a2927;
+  --accent-dark: #050505;
+  --soft: #e7e3dc;
+  --border: rgba(11, 11, 12, 0.12);
+  --shadow: 0 24px 80px rgba(5, 5, 5, 0.12);
 }
 
 * {
@@ -51,8 +51,8 @@ main {
   z-index: -2;
   content: "";
   background:
-    radial-gradient(circle at top right, rgba(244, 185, 66, 0.36), transparent 32rem),
-    linear-gradient(135deg, #111820 0%, #22313d 54%, #651b1b 100%);
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.15), transparent 34rem),
+    linear-gradient(135deg, #050505 0%, #161616 55%, #2c2b28 100%);
 }
 
 .hero::after {
@@ -81,7 +81,7 @@ main {
   align-items: center;
   gap: 12px;
   padding: 8px 12px;
-  background: white;
+  background: #f8f7f3;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
 }
@@ -103,13 +103,13 @@ main {
 .nav-links a:hover,
 .review-links a:hover,
 .footer a:hover {
-  color: var(--gold);
+  color: var(--soft);
 }
 
 .nav-call {
   padding: 12px 18px;
   color: var(--ink);
-  background: white;
+  background: #f8f7f3;
   border-radius: 999px;
   font-weight: 800;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.22);
@@ -135,7 +135,7 @@ main {
   width: min(360px, 76vw);
   margin-bottom: 28px;
   padding: 18px 22px;
-  background: white;
+  background: #f8f7f3;
   border-radius: 28px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
 }
@@ -148,7 +148,7 @@ main {
 
 .eyebrow {
   margin: 0 0 14px;
-  color: var(--red);
+  color: var(--accent);
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.16em;
@@ -156,7 +156,7 @@ main {
 }
 
 .hero .eyebrow {
-  color: var(--gold);
+  color: var(--soft);
 }
 
 h1,
@@ -220,8 +220,8 @@ h3 {
 
 .button.primary {
   color: white;
-  background: var(--red);
-  box-shadow: 0 16px 40px rgba(198, 40, 40, 0.35);
+  background: var(--accent-dark);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
 }
 
 .button.secondary {
@@ -249,7 +249,7 @@ h3 {
 .hero-card {
   padding: 30px;
   color: var(--ink);
-  background: rgba(255, 250, 241, 0.94);
+  background: rgba(251, 250, 247, 0.94);
   backdrop-filter: blur(18px);
 }
 
@@ -277,13 +277,13 @@ h3 {
 .hero-card a {
   display: inline-block;
   margin-top: 8px;
-  color: var(--red);
+  color: var(--accent);
   font-weight: 900;
 }
 
 .card-label {
   margin-bottom: 12px;
-  color: var(--red);
+  color: var(--accent);
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.14em;
@@ -407,9 +407,9 @@ h3 {
   flex: 0 0 auto;
   width: 12px;
   height: 12px;
-  background: var(--red);
+  background: var(--accent-dark);
   border-radius: 999px;
-  box-shadow: 0 0 0 6px rgba(198, 40, 40, 0.1);
+  box-shadow: 0 0 0 6px rgba(5, 5, 5, 0.08);
 }
 
 .split-section {
@@ -434,8 +434,8 @@ h3 {
   color: white;
   background:
     linear-gradient(rgba(17, 24, 32, 0.12), rgba(17, 24, 32, 0.82)),
-    radial-gradient(circle at 80% 20%, rgba(244, 185, 66, 0.58), transparent 18rem),
-    var(--red-dark);
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.16), transparent 18rem),
+    var(--accent-dark);
 }
 
 .quote-panel p {
