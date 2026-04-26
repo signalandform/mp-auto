@@ -3,7 +3,7 @@ import Image from "next/image";
 const phoneDisplay = "(817) 548-0680";
 const phoneHref = "tel:+18175480680";
 const address = "1238 W Arkansas Ln, Arlington, TX 76013";
-const logoSrc = "/images/mp-auto-logo.png";
+const logoSrc = "/images/mp-auto-logo-white.png";
 const mapHref =
   "https://www.google.com/maps/search/?api=1&query=1238%20W%20Arkansas%20Ln%2C%20Arlington%2C%20TX%2076013";
 

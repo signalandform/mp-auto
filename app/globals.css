@@ -80,10 +80,6 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 8px 12px;
-  background: #f8f7f3;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
 }
 
 .brand img {
@@ -134,10 +130,6 @@ main {
   justify-content: center;
   width: min(360px, 76vw);
   margin-bottom: 28px;
-  padding: 18px 22px;
-  background: #f8f7f3;
-  border-radius: 28px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
 }
 
 .hero-logo img {
