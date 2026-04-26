@@ -305,6 +305,57 @@ h3 {
   color: var(--ink);
 }
 
+.product-spotlight {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  align-items: center;
+  padding-top: 0;
+  gap: 34px;
+}
+
+.product-copy {
+  padding: 30px;
+  background: var(--ink);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.product-copy .eyebrow,
+.product-copy h2,
+.product-copy p {
+  color: white;
+}
+
+.product-copy p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+}
+
+.product-slider {
+  display: grid;
+  grid-auto-columns: minmax(260px, 360px);
+  grid-auto-flow: column;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 4px 4px 18px;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--accent) transparent;
+}
+
+.product-slide {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #050505;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  scroll-snap-align: start;
+}
+
+.product-slide img {
+  object-fit: cover;
+}
+
 .gallery {
   padding-top: 0;
 }
@@ -518,13 +569,18 @@ h3 {
 
   .hero-grid,
   .visit-card,
-  .split-section {
+  .split-section,
+  .product-spotlight {
     grid-template-columns: 1fr;
   }
 
   .hero-grid {
     margin-top: 54px;
     gap: 36px;
+  }
+
+  .product-slider {
+    margin-inline: -4px;
   }
 
   .reputation-grid,
@@ -579,7 +635,9 @@ h3 {
   .visit-card,
   .about-panel,
   .quote-panel,
-  .gallery-card {
+  .gallery-card,
+  .product-copy,
+  .product-slide {
     border-radius: 24px;
   }
 

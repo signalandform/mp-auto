@@ -81,6 +81,73 @@ const shopPhotos = [
   },
 ];
 
+const dadHatPhotos = [
+  {
+    src: "/images/dad-hat-1.png",
+    alt: "MP Auto Repair dad hat side angle",
+  },
+  {
+    src: "/images/dad-hat-2.png",
+    alt: "MP Auto Repair dad hat back view",
+  },
+  {
+    src: "/images/dad-hat-3.png",
+    alt: "MP Auto Repair dad hat side profile",
+  },
+  {
+    src: "/images/dad-hat-4.png",
+    alt: "MP Auto Repair dad hat front angle",
+  },
+  {
+    src: "/images/dad-hat-5.png",
+    alt: "MP Auto Repair dad hat angled front view",
+  },
+  {
+    src: "/images/dad-hat-6.png",
+    alt: "MP Auto Repair dad hat straight-on front view",
+  },
+];
+
+const underArmourPoloPhotos = [
+  {
+    src: "/images/under-armour-polo-1.png",
+    alt: "MP Auto Repair Under Armour polo side view",
+  },
+  {
+    src: "/images/under-armour-polo-2.png",
+    alt: "MP Auto Repair Under Armour polo opposite side view",
+  },
+  {
+    src: "/images/under-armour-polo-3.png",
+    alt: "MP Auto Repair Under Armour polo modeled front view",
+  },
+  {
+    src: "/images/under-armour-polo-4.png",
+    alt: "MP Auto Repair Under Armour polo front product view",
+  },
+  {
+    src: "/images/under-armour-polo-5.png",
+    alt: "MP Auto Repair Under Armour polo modeled standing view",
+  },
+  {
+    src: "/images/under-armour-polo-6.png",
+    alt: "MP Auto Repair Under Armour polo modeled back view",
+  },
+];
+
+const customVanityPlatePhotos = [
+  {
+    src: "/images/custom-vanity-plate-1.png",
+    alt: "MP Auto Repair custom vanity plate mounted on a blue car",
+  },
+  {
+    src: "/images/custom-vanity-plate-2.png",
+    alt: "MP Auto Repair custom vanity plate product photo",
+  },
+];
+
+const galleryPhotos = [...shopPhotos, ...dadHatPhotos];
+
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
@@ -260,15 +327,89 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section product-spotlight" aria-labelledby="product-heading">
+        <div className="product-copy">
+          <p className="eyebrow">Product spotlight</p>
+          <h2 id="product-heading">Dad Hat</h2>
+          <p>
+            A clean black cap with the MP Auto Repair mark embroidered up front. Swipe through the
+            gallery to see the fit from every angle.
+          </p>
+        </div>
+        <div className="product-slider" aria-label="Dad Hat image carousel">
+          {dadHatPhotos.map((photo) => (
+            <div className="product-slide" key={photo.src}>
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                sizes="(max-width: 640px) 82vw, 360px"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section product-spotlight" aria-labelledby="polo-heading">
+        <div className="product-copy">
+          <p className="eyebrow">Product gallery</p>
+          <h2 id="polo-heading">Under Armour Polo</h2>
+          <p>
+            A black performance polo with the MP Auto Repair mark on the chest. Swipe through the
+            gallery to see the product and modeled views.
+          </p>
+        </div>
+        <div className="product-slider" aria-label="Under Armour Polo image carousel">
+          {underArmourPoloPhotos.map((photo) => (
+            <div className="product-slide" key={photo.src}>
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                sizes="(max-width: 640px) 82vw, 360px"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section product-spotlight" aria-labelledby="vanity-plate-heading">
+        <div className="product-copy">
+          <p className="eyebrow">Product gallery</p>
+          <h2 id="vanity-plate-heading">Custom Vanity Plate</h2>
+          <p>
+            A crisp MP Auto Repair vanity plate design for domestic and import builds, shown both
+            mounted and as a standalone product.
+          </p>
+        </div>
+        <div className="product-slider" aria-label="Custom Vanity Plate image carousel">
+          {customVanityPlatePhotos.map((photo) => (
+            <div className="product-slide" key={photo.src}>
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                sizes="(max-width: 640px) 82vw, 360px"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="section gallery" aria-labelledby="gallery-heading">
         <div className="section-heading">
           <p className="eyebrow">Gallery</p>
-          <h2 id="gallery-heading">Shop photos</h2>
+          <h2 id="gallery-heading">Shop and merch photos</h2>
         </div>
         <div className="gallery-grid">
-          {shopPhotos.map((photo) => (
+          {galleryPhotos.map((photo) => (
             <div className="gallery-card" key={photo.src}>
-              <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 640px) 100vw, 25vw" />
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, 25vw"
+              />
             </div>
           ))}
         </div>
